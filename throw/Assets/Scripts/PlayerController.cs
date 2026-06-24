@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
 	float moveX;
-	Rigidbody2D rbody;
 
 	const int MoveSpeed = 4;
 
@@ -31,8 +30,5 @@ public class PlayerController : MonoBehaviour
 		}
 
 	}
-	private void FixedUpdate()
-	{
-		rbody = new Vector2(moveX * MoveSpeed, rbody.y);
-	}
+	
 }
