@@ -20,15 +20,6 @@ public class PlayerController : MonoBehaviour
 	void Update()
 	{
 		moveX = 0;
-		if (Keyboard.current.leftArrowKey.wasPressedThisFrame)
-		{
-			moveX = -1;
-		}
-		if (Keyboard.current.rightArrowKey.wasPressedThisFrame)
-		{
-			moveX = 1;
-		}
-
-	}
-	
+		
+	}	
 }
