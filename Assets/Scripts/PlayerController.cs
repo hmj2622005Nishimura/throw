@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-	const int MoveSpeed = 1;
+	float MoveSpeed = 0.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,6 +22,16 @@ public class PlayerController : MonoBehaviour
 		if (Keyboard.current.rightArrowKey.wasPressedThisFrame)
 		{
 			transform.Translate(MoveSpeed, 0, 0);
+		}
+
+		if(transform.position.x > 2)
+		{
+			transform.position = new Vector3(2,4,0);
+		}
+
+		if(transform.position.x < -2)
+		{
+			transform.position = new Vector3(-2,4,0);
 		}
 	}
 }
