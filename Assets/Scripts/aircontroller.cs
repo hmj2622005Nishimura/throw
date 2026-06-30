@@ -8,7 +8,6 @@ public class aircontroller : MonoBehaviour
 		{
 			GetComponent<BoxCollider2D>();
 			Destroy(collision.gameObject);
-			Debug.Log("В”Вс");
 		}
 	}
 }

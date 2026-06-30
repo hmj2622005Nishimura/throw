@@ -43,8 +43,7 @@ public class PlayerController : MonoBehaviour
 		//ぶつかった相手の	タグがObstanclesの場合ゲームオーバー
 		if (collision.gameObject.CompareTag("obstancles"))
 		{
-			Debug.Log("しぬぅ！");
-			//SceneManager.LoadScene("GAME OVER");
+			SceneManager.LoadScene("GAMEOVERscene");
 		}
 	}
 }
