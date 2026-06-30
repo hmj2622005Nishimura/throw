@@ -15,7 +15,9 @@ public class obstanclesGenerater : MonoBehaviour
 		{
 			delta = 0;
 			GameObject obstancles1 = Instantiate(SeaUrchin);
-			MoveSpeed = 100;
+			MoveSpeed = 200;
+			float x = Random.Range(-2, 2);
+			obstancles1.transform.position = new Vector3(x, -5, 0);
 			obstancles1.GetComponent<obstanclesContoroller>().Shoot(new Vector2(0, MoveSpeed));
 		}
     }
