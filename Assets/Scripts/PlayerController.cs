@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-	float MoveSpeed = 0.5f;
+	float MoveSpeed = 0.5f;//移動距離
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		//移動
 		if (Keyboard.current.leftArrowKey.wasPressedThisFrame)
 		{
 			transform.Translate(MoveSpeed * -1, 0, 0);
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
 			transform.Translate(MoveSpeed, 0, 0);
 		}
 
+		//画面端に行ったときに画面外に行かない
 		if(transform.position.x > 2)
 		{
 			transform.position = new Vector3(2,4,0);
@@ -32,6 +34,15 @@ public class PlayerController : MonoBehaviour
 		if(transform.position.x < -2)
 		{
 			transform.position = new Vector3(-2,4,0);
+		}
+
+	}
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		//ぶつかった相手の	タグがObstanclesの場合ゲームオーバー
+		if (collision.gameObject.CompareTag("obstancles"))
+		{
+			Debug.Log("しぬぅ！");
 		}
 	}
 }
