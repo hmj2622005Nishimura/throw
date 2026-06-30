@@ -29,12 +29,12 @@ public class PlayerController : MonoBehaviour
 		//画面端に行ったときに画面外に行かない
 		if(transform.position.x > 2)
 		{
-			transform.position = new Vector3(2,4,0);
+			transform.position = new Vector3(2,3,0);
 		}
 
 		if(transform.position.x < -2)
 		{
-			transform.position = new Vector3(-2,4,0);
+			transform.position = new Vector3(-2,3,0);
 		}
 
 	}
