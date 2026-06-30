@@ -3,7 +3,7 @@ using TMPro;
 
 public class TEXTmanager : MonoBehaviour
 {
-	int distance = 0;
+	public static int distance = 0;
 	[SerializeField] GameObject TEXT;
 	// Update is called once per frame
 	private void Start()
