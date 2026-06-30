@@ -20,5 +20,6 @@ public class obstanclesGenerater : MonoBehaviour
 			obstancles1.transform.position = new Vector3(x, -5, 0);
 			obstancles1.GetComponent<obstanclesContoroller>().Shoot(new Vector2(0, MoveSpeed));
 		}
+
     }
 }

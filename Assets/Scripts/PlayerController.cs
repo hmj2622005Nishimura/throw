@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-	float MoveSpeed = 0.5f;//ˆÚ“®‹——£
+	float MoveSpeed = 1.0f;//ˆÚ“®‹——£
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,6 +44,7 @@ public class PlayerController : MonoBehaviour
 		if (collision.gameObject.CompareTag("obstancles"))
 		{
 			Debug.Log("‚µ‚Ê‚£I");
+			//SceneManager.LoadScene("GAME OVER");
 		}
 	}
 }

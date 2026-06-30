@@ -4,9 +4,11 @@ public class aircontroller : MonoBehaviour
 {
 	public void OnTriggerStay2D(Collider2D collision)
 	{
-		if(collision.gameObject.CompareTag("PLAYER"))
+		if(collision.gameObject)
 		{
 			GetComponent<BoxCollider2D>();
+			Destroy(collision.gameObject);
+			Debug.Log("В”Вс");
 		}
 	}
 }
